@@ -23,8 +23,8 @@ const App = () => {
   // const [scores, setScores] = useState({ xScore: 0, oScore: 0 });
   let [oScore, setoScore] = useState(0);
   let [xScore, setxScore] = useState(0);
-  console.log("xScore-set" + xScore);
-  console.log("oScore-set" + oScore);
+  console.log("xScore-set"+xScore);
+  console.log("oScore-set"+oScore);
 
   const [gameOver, setGameOver] = useState(false);
 
@@ -47,17 +47,17 @@ const App = () => {
       if (winner === "O") {
         // let { oScore } = scores;
         oScore += 1;
-        console.log("oScore win" + oScore);
+        console.log("oScore win"+ oScore);
         localStorage.setItem("oScore", oScore); // Assign value to a key
 
         setoScore(oScore);
       } else {
         // let { xScore } = scores;
         xScore += 1;
-        console.log("xScore win" + xScore);
+        console.log("xScore win"+xScore);
         localStorage.setItem("xScore", xScore); // Assign value to a key
         const itemx = JSON.parse(localStorage.getItem("xScore"));
-        console.log("itemxlocal" + itemx);
+        console.log("itemxlocal"+itemx);
         setxScore(xScore);
       }
     }
@@ -93,19 +93,20 @@ const App = () => {
   useEffect(() => {
     const itemx = JSON.parse(localStorage.getItem("xScore"));
     const itemo = JSON.parse(localStorage.getItem("oScore"));
-    console.log("itemx" + itemx);
-    console.log("itemo" + itemo);
+    console.log("itemx"+itemx);
+  console.log("itemo"+itemo);
     if (itemx) {
       setxScore(itemx);
     }
-    if (itemo) {
+    if(itemo){
       setoScore(itemo);
     }
-  }, [xScore, oScore]);
+  }, [xScore,oScore]);
 
   return (
     <div className="App">
-      <h1 className="text-center">Tic Tac Toe</h1>
+    
+      <h1 >Tic Tac Toe</h1>
 
       <ScoreBoard xScore={xScore} oScore={oScore} xPlaying={xPlaying} />
       <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />

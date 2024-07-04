@@ -4,6 +4,10 @@
 
 body {
   margin: 0;
-  background-color: #efefef;
+  background-color: #edfdf8;
   font-family: "Fredoka", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
 }
