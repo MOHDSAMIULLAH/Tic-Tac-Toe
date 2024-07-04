@@ -3,6 +3,8 @@
 
 This is a simple two-player Tic-Tac-Toe game implemented in React.js.
 
+## Deployed Link: https://tic-tac-toe-tau-sandy-26.vercel.app/
+
 ## Features
 
 - Two players can play Tic-Tac-Toe.
