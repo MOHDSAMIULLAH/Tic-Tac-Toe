@@ -22,7 +22,6 @@ const App = () => {
 
   const [xPlaying, setXPlaying] = useState(true);
   const [board, setBoard] = useState(Array(9).fill(null));
-  // const [scores, setScores] = useState({ xScore: 0, oScore: 0 });
   let [oScore, setoScore] = useState(0);
   let [xScore, setxScore] = useState(0);
   console.log("xScore-set" + xScore);
@@ -47,17 +46,15 @@ const App = () => {
 
     if (winner) {
       if (winner === "O") {
-        // let { oScore } = scores;
         oScore += 1;
         console.log("oScore win" + oScore);
-        localStorage.setItem("oScore", oScore); // Assign value to a key
+        localStorage.setItem("oScore", oScore); 
         setoScore(oScore);
         toast("Player O won")
       } else {
-        // let { xScore } = scores;
         xScore += 1;
         console.log("xScore win" + xScore);
-        localStorage.setItem("xScore", xScore); // Assign value to a key
+        localStorage.setItem("xScore", xScore); 
         const itemx = JSON.parse(localStorage.getItem("xScore"));
         console.log("itemxlocal" + itemx);
         setxScore(xScore);

@@ -3,7 +3,6 @@ import React from 'react'
 import "./ScoreBoard.css"
 
 export const ScoreBoard = ({ oScore = 0, xScore , xPlaying }) => {
-  // const { xScore, oScore } = scores;
   console.log("oScore");
   console.log(oScore);
   return (
